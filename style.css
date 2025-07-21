@@ -1,127 +1,83 @@
-/* 폰트 임포트 (온결: Inter, 선율: 고딕/고스펑크) */
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-/* 폰트 임포트 (고딕+고스펑크, 양쪽 동일) */
 @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-/* 전체 공통 스타일 */
 /* 전체 공통 */
 body {
-background-color: #111;
-color: #fff;
-  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', Arial, sans-serif;
-margin: 0;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-transition: background 0.3s, color 0.3s, font-family 0.2s;
+  background-color: #111;
+  color: #fff;
+  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, color 0.3s, font-family 0.2s;
 }
 
 .container {
-width: 100%;
-max-width: 370px;
-text-align: center;
-padding: 24px 8px 24px 8px;
-border-radius: 18px;
-box-sizing: border-box;
+  width: 100%;
+  max-width: 370px;
+  text-align: center;
+  padding: 24px 8px 24px 8px;
+  border-radius: 18px;
+  box-sizing: border-box;
 }
 
-/* 기본 h1: 온결/선율에서 오버라이드됨 */
+/* 헤더 (h1) */
 h1 {
+  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', 'Montserrat', Arial, sans-serif;
   font-size: 3rem;
-margin-bottom: 22px;
-font-weight: 900;
-letter-spacing: 1px;
+  margin-bottom: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #b39ddb; /* 연보라 계열로 통일감 */
+  text-shadow: 2px 2px 12px #231a2a80;
 }
 
 /* 버튼/링크 스타일 */
 .buttons {
-display: flex;
-flex-direction: column;
-gap: 13px;
-align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: stretch;
 }
 .buttons button,
 .buttons a {
+  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', 'Montserrat', Arial, sans-serif;
   font-size: 1.1rem;
-  font-size: 1.15rem;
-padding: 12px 0;
-border: none;
-border-radius: 10px;
-background: #232323;
-color: #fff;
-text-decoration: none;
-margin: 0;
-font-family: inherit;
-font-weight: 700;
-cursor: pointer;
-transition: background 0.2s, color 0.2s;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: #231a2a;
+  color: #b39ddb;
+  text-decoration: none;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 .buttons button:hover,
 .buttons a:hover {
-background: #444;
+  background: #5c4d6a;
+  color: #fff;
 }
 
 /* 모바일 반응형 */
 @media (max-width: 600px) {
-.container {
-padding: 16px 2vw;
-max-width: 98vw;
-border-radius: 0;
-}
-h1 {
-font-size: 2rem !important;
-}
-}
-
-/* ---- 온결(모던 산세리프, 화이트) ---- */
-/* ---- 온결(통일, 흰색) ---- */
-body.ongyeol {
-background-color: #111;
-color: #fff;
-  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', Arial, sans-serif;
-}
-body.ongyeol h1 {
-  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: #fff;
-}
-
-/* ---- 선율(고스펑크+연보라) ---- */
-/* ---- 선율(통일, 연보라) ---- */
-body.seonyul {
-background-color: #111;
-color: #b39ddb;
-  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', 'Montserrat', Arial, sans-serif;
-  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', Arial, sans-serif;
-letter-spacing: 0.5px;
-}
-body.seonyul h1 {
-  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', Arial, sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-color: #b39ddb;
-}
-body.seonyul .buttons a,
-body.seonyul .buttons button {
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-color: #b39ddb;
-background: #231a2a;
-}
-body.seonyul .buttons a:hover,
-body.seonyul .buttons button:hover {
-background: #5c4d6a;
-color: #fff;
+  .container {
+    padding: 16px 2vw;
+    max-width: 98vw;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  .buttons button,
+  .buttons a {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
 }
