@@ -1,4 +1,4 @@
-/* 폰트 임포트 (고딕+고스펑크용) */
+/* 고딕+고스펑크용 폰트 임포트 */
 @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
@@ -83,7 +83,18 @@ body.ongyeol {
 body.seonyul {
   background-color: #111;
   color: #b39ddb;
-  /* 여러 고딕/고스펑크 폰트 순서대로 우선 적용 */
   font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', 'Rock Salt', Arial, sans-serif;
   letter-spacing: 0.5px;
+}
+
+/* 선율 모드에서 헤드라인, 버튼 크기 키우기 */
+body.seonyul h1 {
+  font-size: 2rem;
+}
+
+body.seonyul .buttons a,
+body.seonyul .buttons button {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
