@@ -31,3 +31,4 @@ function switchAlter() {
   current = (current + 1) % alters.length;
   applyAlterStyle();
 }
+
