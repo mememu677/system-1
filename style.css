@@ -89,7 +89,7 @@ body.seonyul {
 
 /* 선율 모드에서 헤드라인, 버튼 크기 키우기 */
 body.seonyul h1 {
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 body.seonyul .buttons a,
