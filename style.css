@@ -1,13 +1,15 @@
-/* 고딕+고스펑크용 폰트 임포트 */
+/* 폰트 임포트 (온결: Inter, 선율: 고딕/고스펑크) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
 
+/* 전체 공통 스타일 */
 body {
   background-color: #111;
   color: #fff;
-  font-family: 'Noto Sans', Arial, sans-serif;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
   margin: 0;
   min-height: 100vh;
   display: flex;
@@ -26,23 +28,23 @@ body {
   box-sizing: border-box;
 }
 
+/* 기본 h1: 온결/선율에서 오버라이드됨 */
 h1 {
-  font-size: 2rem;
   margin-bottom: 22px;
-  font-weight: bold;
+  font-weight: 900;
   letter-spacing: 1px;
 }
 
+/* 버튼/링크 스타일 */
 .buttons {
   display: flex;
   flex-direction: column;
   gap: 13px;
   align-items: stretch;
 }
-
 .buttons button,
 .buttons a {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 12px 0;
   border: none;
   border-radius: 10px;
@@ -51,16 +53,16 @@ h1 {
   text-decoration: none;
   margin: 0;
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
-
 .buttons button:hover,
 .buttons a:hover {
   background: #444;
 }
 
+/* 모바일 반응형 */
 @media (max-width: 600px) {
   .container {
     padding: 16px 2vw;
@@ -68,34 +70,47 @@ h1 {
     border-radius: 0;
   }
   h1 {
-    font-size: 1.1rem;
+    font-size: 2rem !important;
   }
 }
 
-/* ---- 온결(기본, 고딕) ---- */
+/* ---- 온결(모던 산세리프, 화이트) ---- */
 body.ongyeol {
   background-color: #111;
   color: #fff;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+}
+body.ongyeol h1 {
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
   font-size: 3rem;
-  font-family: 'Noto Sans', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
-/* ---- 선율(연보라, 고스펑크) ---- */
+/* ---- 선율(고스펑크+연보라) ---- */
 body.seonyul {
   background-color: #111;
   color: #b39ddb;
-  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', 'Rock Salt', Arial, sans-serif;
+  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', 'Montserrat', Arial, sans-serif;
   letter-spacing: 0.5px;
 }
-
-/* 선율 모드에서 헤드라인, 버튼 크기 키우기 */
 body.seonyul h1 {
-  font-size: 2rem;
+  font-family: 'Grenze Gotisch', 'UnifrakturCook', 'Creepster', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #b39ddb;
 }
-
 body.seonyul .buttons a,
 body.seonyul .buttons button {
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 1.5px;
+  color: #b39ddb;
+  background: #231a2a;
+}
+body.seonyul .buttons a:hover,
+body.seonyul .buttons button:hover {
+  background: #5c4d6a;
+  color: #fff;
 }
